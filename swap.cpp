@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdint>
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -20,16 +20,17 @@ int main()
     }
 
     cout << f << endl;
-    
-    for (int i = f - 1; i <= 0; i--)
+
+    for (int i = f - 1; i >= 0; i--)
     {
         r = o%10;
         arr[i] = r;
+        //cout<<arr[i];
         o = o/10;
     }
     
 
-    // swap(arr[0], arr[f - 1]);
+    swap(arr[0], arr[f - 1]);
 
     for (int i = 0; i <= f - 1; i++)
     {
